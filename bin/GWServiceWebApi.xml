@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GWServiceWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.update_Equip_Simple(Newtonsoft.Json.Linq.JObject)">
+             <summary>
+             更新设备配置数据
+             </summary>
+             <param name="jb">
+            equip_no设备号z
+            equip_nm设备名
+            equip_detail设备属性
+            acc_cyc通讯刷新周期
+            related_pic关联界面
+            proc_advice通故障处理意见
+            out_of_contact故障提示
+            contacted故障恢复提示
+            event_wav报警声音文件
+            local_addr通讯端口
+            equip_addr设备地址
+            communication_param通讯参数
+            communication_time_param通讯时间参数
+            raw_equip_no模板设备号
+            tabname附表名称
+            alarm_scheme报警方式
+            attrib属性
+            sta_IP sta_IP
+            AlarmRiseCycle报警升级周期（分钟
+            Reserve1预留字段1
+            Reserve2预留字段2
+            Reserve3预留字段3
+            related_video关联视频
+            ZiChanID资产编号
+            PlanNo预案号
+            SafeTime安全时段
+             </param>
+             <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.creatXml">
+            <summary>
+            创建一个xml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_DataByTableName(Newtonsoft.Json.Linq.JObject)">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            根据表名查询数据
+            </summary>
+            <param name="jb">
+            TableName 报警分类，多个值请用逗号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_AlarmConfig(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取事件的报警配置
+            </summary>
+            <param name="jb">
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_RealTimeEvent(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取当前系统报警的实时事件
+            </summary>
+            <param name="jb">
+            event_Level_list 报警分类，多个值请用逗号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_RealTimeEventCount(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取当前实时报警事件的总数
+            </summary>
+            <param name="jb">
+            levels 报警分类，多个分类请用';'符号隔开，多个值请用逗号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.set_EventConfirm(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            确认当前报警事件
+            </summary>
+            <param name="jb">
+             msg:处理意见
+             shortmsg:是否发送短信
+             tel:发送人的电话
+             evtname:事件名
+             time:事件时间
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_EquipEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询设备事件
+            </summary>
+            <param name="jb">
+             times:时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+             equip_no_list:设备号，多个数据时请用“,”号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_SetEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询设置事件
+            </summary>
+            <param name="jb">
+             times:时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+             equip_no_list:设备号，多个数据时请用“,”号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.get_SystemEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询系统事件(仅支持管理员)
+            </summary>
+            <param name="jb">
+            times 时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.SelectData(System.String)">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            查询设备配置表
+            </summary>
+            <param name="tableName">表名</param>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.updateEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.insertEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.deleteEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceWebAPI.Controllers.GWServiceWebAPIController.WriteLog(System.String)">
+            <summary>
+            写入日志，默认c盘
+            </summary>
+            <param name="strLog"></param>
+        </member>
+        <member name="T:GWServiceWebAPI.WebService1">
+            <summary>
+            WebService1 的摘要说明
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,54 @@
+﻿<div class="navbar">
+    <div class="navbar-inner">
+        <div class="center sliding">语音控制</div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel"><i class="iconfont icon-caidan"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <div data-page="Voice" class="page mobileNotSelect" id="Voice">
+        <div class="page-content tabs-animated-wrap">
+            <div class="buttons-row">
+                <a id="row_bd_voice" href="#bd_voice" onclick="tab_voices('bd')" class="tab-link button">百度语音</a>
+                <a id="row_xf_voice" href="#xf_voice" onclick="tab_voices('xf')" class="tab-link button">讯飞语音</a>
+                <a href="#set_voice" class="tab-link button">设置</a>
+            </div>
+            <div class="tabs">
+                <div id="bd_voice" class="tab">
+                    <div class="voiceDiv">
+                        <div id="voiceMessage_bd" class="voiceTitle">按住说话</div>
+                        <div id="waveAnim_bd" class="waveAnim" style="display:none;"><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="voice" id="voiceBtn"><i class="iconfont icon-yuyin2"></i></div>
+                        <div class="voicetest"></div>
+                    </div>
+                </div>
+                <div id="xf_voice" class="tab" >
+                    <p id="voiceMessage_xf1" class="voiceTitle" style="position:absolute;top:auto;"></p>
+                    <div class="voiceDiv">
+                        <p id="voiceMessage_xf2" class="voiceTitle"></p>
+                        <div id="waveAnim_xf" class="waveAnim" style="display:none;"><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="voice" style="color:#f7f7f7" id="voiceBtn_xf">点击说话</div>
+                    </div>
+                </div>
+                <div id="set_voice" class="tab list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label" style="">讯飞离线识别</div>
+                                    <div class="item-input">
+                                        <label class="label-switch">
+                                            <input id="xfoffline" onchange="onXFOffline()" type="checkbox" name="switch" value="yes">
+                                            <div class="checkbox"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

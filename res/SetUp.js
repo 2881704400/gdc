@@ -1,0 +1,1 @@
+﻿var setUp = [{"SetName":"海报与座位图轮播","Show":1,"Time":5},{"SetName":"是否显示座位图","Show":1}]
